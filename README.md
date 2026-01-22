@@ -1,11 +1,5 @@
 # 🚗 Vehicle Rental Management System (CLI – Java)
 
-## 📘 Module Information
-- **Module Name:** Object Oriented Programming  
-- **Module Code:** CCS1303  
-- **Assignment:** OOP Assignment 2  
-- **Submission Deadline:** 14 February 2026  
-
 ---
 
 ## 📌 Project Overview
