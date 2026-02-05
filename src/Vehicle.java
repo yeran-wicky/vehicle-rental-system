@@ -58,4 +58,12 @@ public abstract class Vehicle {
     public void setIsAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
     }
+
+    public void displayDetails() {
+        System.out.println("Vehicle ID: "+vehicleId);
+        System.out.println("Vehicle brand: "+brand);
+        System.out.println("Vehicle model: "+model);
+        System.out.println("Base rate per day: "+baseRatePerDay);
+        System.out.println("Availability: "+isAvailable);
+    }
 }
