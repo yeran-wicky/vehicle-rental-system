@@ -167,7 +167,7 @@ Enter your choice:
 
 ---
 
-## 👥 Team Contribution
+## 👥 Team Members
 
 1. B. Y. Wickramaarachchi (Lead)
 2. A. S. P. Gunarathne
