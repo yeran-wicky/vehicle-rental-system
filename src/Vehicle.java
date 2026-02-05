@@ -18,4 +18,24 @@ public abstract class Vehicle {
         this.baseRatePerDay = baseRatePerDay;
         this.isAvailable = isAvailable;
     }
+
+    public String getVehicleId() {
+        return vehicleId;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getBaseRatePerDay() {
+        return baseRatePerDay;
+    }
+
+    public boolean getIsAvailable() {
+        return isAvailable;
+    }
 }
