@@ -38,4 +38,24 @@ public abstract class Vehicle {
     public boolean getIsAvailable() {
         return isAvailable;
     }
+
+    public void setVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setBaseRatePerDay(double baseRatePerDay) {
+        this.baseRatePerDay = baseRatePerDay;
+    }
+
+    public void setIsAvailable(boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
 }
