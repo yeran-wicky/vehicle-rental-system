@@ -66,4 +66,6 @@ public abstract class Vehicle {
         System.out.println("Base rate per day: "+baseRatePerDay);
         System.out.println("Availability: "+isAvailable);
     }
+
+    public abstract double calculateRentalCost(int days);
 }
