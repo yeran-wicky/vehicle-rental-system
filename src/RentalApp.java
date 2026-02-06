@@ -79,14 +79,20 @@ public class RentalApp {
                         System.out.println("\nYour van has been successfully added to the system");
                     }
                 }else if (choice == 2){
-                    for (Vehicle v : vArrList) {
-                        v.displayDetails();
+
+                    if (vArrList.isEmpty()){
+                        System.out.println("No vehicles available for now");
+                    }else{
+                        for (Vehicle v : vArrList) {
+                            v.displayDetails();
+                            System.out.println();
+                        }
                     }
+
                 }else if (choice == 3){
                     System.out.println("Vehicle types: ");
                     System.out.println("1. Car\n2.Bike\n3.Van");
                     System.out.print("Choose vehicle type: ");
-
 
                 }
             }catch (InputMismatchException e) {
