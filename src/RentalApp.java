@@ -87,6 +87,12 @@ public class RentalApp {
                     for (Vehicle v : CarArrList) {
                         v.displayDetails();
                     }
+                    for (Vehicle v : BikeArrList) {
+                        v.displayDetails();
+                    }
+                    for (Vehicle v : VanArrList) {
+                        v.displayDetails();
+                    }
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Invalid input");
