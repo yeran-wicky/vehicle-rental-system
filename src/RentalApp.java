@@ -16,6 +16,53 @@ public class RentalApp {
             System.out.println("6. View total rental income");
             System.out.println("7. Exit");
             System.out.println("\nChoose an option");
+
+            try {
+                int choice = sc.nextInt();
+
+                if (choice == 1){
+                    System.out.println("Add a vehicle option selected.");
+                    System.out.println("Choose vehicle type: \n");
+                    System.out.println("1. Car");
+                    System.out.println("2. Bike");
+                    System.out.println("3. Van");
+
+                    int chosenVehic = sc.nextInt();
+
+                    if (chosenVehic == 1) {
+                        System.out.print("Enter vehicle ID: ");
+                        String vehicleId = sc.next();
+                        System.out.print("Enter vehicle brand: ");
+                        String brand = sc.next();
+                        System.out.print("Enter vehicle model: ");
+                        String model = sc.next();
+                        System.out.print("Enter base rate per day: ");
+                        double baseRatePerDay = sc.nextDouble();
+
+                    }else if (chosenVehic == 2) {
+                        System.out.print("Enter vehicle ID: ");
+                        String vehicleId = sc.next();
+                        System.out.print("Enter vehicle brand: ");
+                        String brand = sc.next();
+                        System.out.print("Enter vehicle model: ");
+                        String model = sc.next();
+                        System.out.print("Enter base rate per day: ");
+                        double baseRatePerDay = sc.nextDouble();
+
+                    }else if (chosenVehic == 3) {
+                        System.out.print("Enter vehicle ID: ");
+                        String vehicleId = sc.next();
+                        System.out.print("Enter vehicle brand: ");
+                        String brand = sc.next();
+                        System.out.print("Enter vehicle model: ");
+                        String model = sc.next();
+                        System.out.print("Enter base rate per day: ");
+                        double baseRatePerDay = sc.nextDouble();
+                    }
+                }
+            }catch (InputMismatchException e) {
+                System.out.println("Invalid input");
+            }
         }
     }
 }
