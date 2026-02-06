@@ -41,7 +41,6 @@ public class RentalApp {
                         int numberOfSeats = sc.nextInt();
                         System.out.print("Enter base rate per day: ");
                         double baseRatePerDay = sc.nextDouble();
-
                         boolean isAvailable = true;
 
                         vArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
@@ -58,7 +57,6 @@ public class RentalApp {
                         int engineCapacityCC = sc.nextInt();
                         System.out.print("Enter base rate per day: ");
                         double baseRatePerDay = sc.nextDouble();
-
                         boolean isAvailable = true;
 
                         vArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
@@ -75,7 +73,6 @@ public class RentalApp {
                         double cargoCapacityKg = sc.nextDouble();
                         System.out.print("Enter base rate per day: ");
                         double baseRatePerDay = sc.nextDouble();
-
                         boolean isAvailable = true;
 
                         vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
