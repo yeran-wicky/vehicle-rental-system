@@ -82,12 +82,6 @@ public class RentalApp {
                     for (Vehicle v : vArrList) {
                         v.displayDetails();
                     }
-                    for (Vehicle v : vArrList) {
-                        v.displayDetails();
-                    }
-                    for (Vehicle v : vArrList) {
-                        v.displayDetails();
-                    }
                 }else if (choice == 3){
                     System.out.println("Vehicle types: ");
                     System.out.println("1. Car\n2.Bike\n3.Van");
