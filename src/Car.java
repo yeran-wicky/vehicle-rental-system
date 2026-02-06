@@ -1,4 +1,4 @@
-public class Car extends Vehicle{
+public class Car extends Vehicle {
 
     private int numberOfSeats;
 
@@ -12,5 +12,9 @@ public class Car extends Vehicle{
     ){
         super(vehicleId, brand, model, baseRatePerDay, isAvailable);
         this.numberOfSeats = numberOfSeats;
+    }
+
+    public int getNumberOfSeats() {
+        return numberOfSeats;
     }
 }
