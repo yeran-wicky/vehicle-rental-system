@@ -177,4 +177,8 @@ Enter your choice:
 6. K. N. S. C. Chaya
    
 All team members contributed fairly to the design, implementation, testing, and documentation of the system.
+<<<<<<< HEAD
 TestCommentFromLocal
+=======
+TestCommentFromGithub
+>>>>>>> 2ebf537a81d39a1286a9f7ab1953003ca6da91f5
