@@ -2,9 +2,7 @@ import java.util.*;
 
 public class RentalApp {
 
-    public static ArrayList <Vehicle> CarArrList = new ArrayList <Vehicle> ();
-    public static ArrayList <Vehicle> BikeArrList = new ArrayList <Vehicle> ();
-    public static ArrayList <Vehicle> VanArrList = new ArrayList <Vehicle> ();
+    public static ArrayList <Vehicle> vArrList = new ArrayList <Vehicle> ();
     public static Scanner sc = new Scanner (System.in);
 
     public static void main(String[] args){
@@ -46,7 +44,7 @@ public class RentalApp {
 
                         boolean isAvailable = true;
 
-                        CarArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
+                        vArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
                         System.out.println("\nYour car has been successfully added to the system");
 
                     }else if (chosenVehic == 2) {
@@ -63,7 +61,7 @@ public class RentalApp {
 
                         boolean isAvailable = true;
 
-                        BikeArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
+                        vArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
                         System.out.println("\nYour bike has been successfully added to the system");
 
                     }else if (chosenVehic == 3) {
@@ -80,19 +78,25 @@ public class RentalApp {
 
                         boolean isAvailable = true;
 
-                        VanArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
+                        vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
                         System.out.println("\nYour van has been successfully added to the system");
                     }
                 }else if (choice == 2){
-                    for (Vehicle v : CarArrList) {
+                    for (Vehicle v : vArrList) {
                         v.displayDetails();
                     }
-                    for (Vehicle v : BikeArrList) {
+                    for (Vehicle v : vArrList) {
                         v.displayDetails();
                     }
-                    for (Vehicle v : VanArrList) {
+                    for (Vehicle v : vArrList) {
                         v.displayDetails();
                     }
+                }else if (choice == 3){
+                    System.out.println("Vehicle types: ");
+                    System.out.println("1. Car\n2.Bike\n3.Van");
+                    System.out.print("Choose vehicle type: ");
+
+
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Invalid input");
