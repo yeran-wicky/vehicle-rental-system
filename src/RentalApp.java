@@ -34,50 +34,86 @@ public class RentalApp {
                     if (chosenVehic == 1) {
                         System.out.print("Enter vehicle ID: ");
                         String vehicleId = sc.next();
-                        System.out.print("Enter vehicle brand: ");
-                        String brand = sc.next();
-                        System.out.print("Enter vehicle model: ");
-                        String model = sc.next();
-                        System.out.print("Enter number of seats: ");
-                        int numberOfSeats = sc.nextInt();
-                        System.out.print("Enter base rate per day: ");
-                        double baseRatePerDay = sc.nextDouble();
-                        boolean isAvailable = true;
 
-                        vArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
-                        System.out.println("\nYour car has been successfully added to the system");
+                        boolean isIdExists = false;
+                        for (Vehicle v : vArrList) {
+                            if (v.getVehicleId().equals(vehicleId)) {
+                                isIdExists = true;
+                                break;
+                            }
+                        }
+                        if (isIdExists == true){
+                            System.out.println("\nVehicle ID already exists! Try a different one");
+                        }else {
+                            System.out.print("Enter vehicle brand: ");
+                            String brand = sc.next();
+                            System.out.print("Enter vehicle model: ");
+                            String model = sc.next();
+                            System.out.print("Enter number of seats: ");
+                            int numberOfSeats = sc.nextInt();
+                            System.out.print("Enter base rate per day: ");
+                            double baseRatePerDay = sc.nextDouble();
+                            boolean isAvailable = true;
+
+                            vArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
+                            System.out.println("\nYour car has been successfully added to the system");
+                        }
 
                     }else if (chosenVehic == 2) {
                         System.out.print("Enter vehicle ID: ");
                         String vehicleId = sc.next();
-                        System.out.print("Enter vehicle brand: ");
-                        String brand = sc.next();
-                        System.out.print("Enter vehicle model: ");
-                        String model = sc.next();
-                        System.out.print("Enter engine capacity: ");
-                        int engineCapacityCC = sc.nextInt();
-                        System.out.print("Enter base rate per day: ");
-                        double baseRatePerDay = sc.nextDouble();
-                        boolean isAvailable = true;
 
-                        vArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
-                        System.out.println("\nYour bike has been successfully added to the system");
+                        boolean isIdExists = false;
+                        for (Vehicle v : vArrList) {
+                            if (v.getVehicleId().equals(vehicleId)) {
+                                isIdExists = true;
+                                break;
+                            }
+                        }
+                        if (isIdExists == true){
+                            System.out.println("\nVehicle ID already exists! Try a different one");
+                        }else {
+                            System.out.print("Enter vehicle brand: ");
+                            String brand = sc.next();
+                            System.out.print("Enter vehicle model: ");
+                            String model = sc.next();
+                            System.out.print("Enter engine capacity: ");
+                            int engineCapacityCC = sc.nextInt();
+                            System.out.print("Enter base rate per day: ");
+                            double baseRatePerDay = sc.nextDouble();
+                            boolean isAvailable = true;
+
+                            vArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
+                            System.out.println("\nYour bike has been successfully added to the system");
+                        }
 
                     }else if (chosenVehic == 3) {
                         System.out.print("Enter vehicle ID: ");
                         String vehicleId = sc.next();
-                        System.out.print("Enter vehicle brand: ");
-                        String brand = sc.next();
-                        System.out.print("Enter vehicle model: ");
-                        String model = sc.next();
-                        System.out.print("Enter cargo capacity(Kg): ");
-                        double cargoCapacityKg = sc.nextDouble();
-                        System.out.print("Enter base rate per day: ");
-                        double baseRatePerDay = sc.nextDouble();
-                        boolean isAvailable = true;
 
-                        vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
-                        System.out.println("\nYour van has been successfully added to the system");
+                        boolean isIdExists = false;
+                        for (Vehicle v : vArrList) {
+                            if (v.getVehicleId().equals(vehicleId)) {
+                                isIdExists = true;
+                                break;
+                            }
+                        }
+                        if (isIdExists == true){
+                            System.out.println("\nVehicle ID already exists! Try a different one");
+                        }else {
+                            System.out.print("Enter vehicle brand: ");
+                            String brand = sc.next();
+                            System.out.print("Enter vehicle model: ");
+                            String model = sc.next();
+                            System.out.print("Enter cargo capacity(Kg): ");
+                            double cargoCapacityKg = sc.nextDouble();
+                            System.out.print("Enter base rate per day: ");
+                            double baseRatePerDay = sc.nextDouble();
+                            boolean isAvailable = true;
+
+                            vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
+                            System.out.println("\nYour van has been successfully added to the system");
+                        }
                     }
                 }else if (choice == 2){
 
