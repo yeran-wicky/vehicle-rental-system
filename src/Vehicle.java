@@ -76,5 +76,14 @@ public abstract class Vehicle {
         }
     }
 
+    public void returnVehicle() {
+        if (isAvailable) {
+            System.out.println("Vehicle is currently available");
+        }else {
+            isAvailable = true;
+            System.out.println("Vehicle retuned successfully");
+        }
+    }
+
     public abstract double calculateRentalCost(int days);
 }
