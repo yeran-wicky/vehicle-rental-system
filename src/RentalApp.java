@@ -168,6 +168,14 @@ public class RentalApp {
                             break;
                         }
                     }
+                }else if (choice == 5){
+
+                }else if (choice == 6){
+
+                }else if (choice == 7) {
+                    System.out.println("\nTerminatingGood bye!");
+                    sc.close();
+                    break;
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Invalid input");
