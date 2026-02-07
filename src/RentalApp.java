@@ -3,6 +3,7 @@ import java.util.*;
 public class RentalApp {
 
     public static ArrayList <Vehicle> vArrList = new ArrayList <Vehicle> ();
+    public static double totalIncome;
     public static Scanner sc = new Scanner (System.in);
 
     public static void main(String[] args){
@@ -90,10 +91,47 @@ public class RentalApp {
                     }
 
                 }else if (choice == 3){
-                    System.out.println("Vehicle types: ");
-                    System.out.println("1. Car\n2.Bike\n3.Van");
-                    System.out.print("Choose vehicle type: ");
+                    System.out.println("Enter vehicle ID: ");
+                    String vId = sc.next();
 
+                    Vehicle found = null;
+                    for (Vehicle v : vArrList) {
+                        if (v.getVehicleId().equals(vId)){
+                            found = v;
+                            break;
+                        }
+                    }
+
+                    if (found == null){
+                        System.out.println("Vehicle not available");
+                    }else{
+                        if (!found.getIsAvailable()){
+                            System.out.println("Vehicle is already rented");
+                        }else{
+                            System.out.print("Enter number of days: ");
+                            int days = sc.nextInt();
+
+                            if (days <= 0) {
+                                System.out.println("Days must be greater than zero");
+                            }else{
+                                double cost = found.calculateRentalCost(days);
+                                found.rentVehicle();
+
+                                totalIncome = totalIncome + cost;
+                            }
+                        }
+                    }
+
+                }else if (choice == 4){
+                    System.out.print("Enter vehicle ID to return: ");
+                    String id = sc.next();
+
+                    for (Vehicle v : vArrList) {
+                        if (v.getVehicleId().equals(id)) {
+                            v.returnVehicle();
+                            break;
+                        }
+                    }
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Invalid input");
