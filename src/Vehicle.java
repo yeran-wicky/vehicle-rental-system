@@ -67,5 +67,14 @@ public abstract class Vehicle {
         System.out.println("Availability: "+isAvailable);
     }
 
+    public void rentVehicle() {
+        if (!isAvailable) {
+            System.out.println("Vehicle is already rented");
+        }else {
+            isAvailable = false;
+            System.out.prinln("Vehicle rented successfully");
+        }
+    }
+
     public abstract double calculateRentalCost(int days);
 }
