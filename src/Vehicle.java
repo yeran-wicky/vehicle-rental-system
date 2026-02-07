@@ -72,7 +72,7 @@ public abstract class Vehicle {
             System.out.println("Vehicle is already rented");
         }else {
             isAvailable = false;
-            System.out.prinln("Vehicle rented successfully");
+            System.out.println("Vehicle rented successfully");
         }
     }
 
