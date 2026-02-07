@@ -176,6 +176,8 @@ public class RentalApp {
                     System.out.println("\nTerminatingGood bye!");
                     sc.close();
                     break;
+                }else{
+                    System.out.println("Invalid input. Try again");
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Invalid input");
