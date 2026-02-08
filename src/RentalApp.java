@@ -197,9 +197,11 @@ public class RentalApp {
                     break;
                 }else{
                     System.out.println("Invalid input. Try again");
+                    sc.nextLine();
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Invalid input");
+                sc.nextLine();
             }
         }
     }
