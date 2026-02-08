@@ -81,7 +81,7 @@ public abstract class Vehicle {
             System.out.println("Vehicle is currently available");
         }else {
             isAvailable = true;
-            System.out.println("Vehicle retuned successfully");
+            System.out.println("Vehicle returned successfully");
         }
     }
 
