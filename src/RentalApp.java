@@ -212,6 +212,8 @@ public class RentalApp {
                         if (v.getVehicleId().equals(id)) {
                             v.returnVehicle();
                             break;
+                        }else{
+                            System.out.println("\nNo vehicle found for this ID.");
                         }
                     }
 
