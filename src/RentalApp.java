@@ -132,33 +132,38 @@ public class RentalApp {
 
                 }else if (choice == 3){
                     System.out.println("\nRent a vehicle option selected.");
-                    System.out.println("Enter vehicle ID: ");
-                    String vId = sc.next();
 
-                    Vehicle found = null;
-                    for (Vehicle v : vArrList) {
-                        if (v.getVehicleId().equals(vId)){
-                            found = v;
-                            break;
-                        }
-                    }
-
-                    if (found == null){
-                        System.out.println("Vehicle not available");
+                    if (vArrList.isEmpty()){
+                        System.out.println("No vehicles available for now.");
                     }else{
-                        if (!found.getIsAvailable()){
-                            System.out.println("Vehicle is already rented");
+                        System.out.println("Enter vehicle ID: ");
+                        String vId = sc.next();
+
+                        Vehicle found = null;
+                        for (Vehicle v : vArrList) {
+                            if (v.getVehicleId().equals(vId)){
+                                found = v;
+                                break;
+                            }
+                        }
+
+                        if (found == null){
+                            System.out.println("This vehicle is not available");
                         }else{
-                            System.out.print("Enter number of days: ");
-                            int days = sc.nextInt();
-
-                            if (days <= 0) {
-                                System.out.println("Days must be greater than zero");
+                            if (!found.getIsAvailable()){
+                                System.out.println("Vehicle is already rented");
                             }else{
-                                double cost = found.calculateRentalCost(days);
-                                found.rentVehicle();
+                                System.out.print("Enter number of days: ");
+                                int days = sc.nextInt();
 
-                                totalIncome = totalIncome + cost;
+                                if (days <= 0) {
+                                    System.out.println("Days must be greater than zero");
+                                }else{
+                                    double cost = found.calculateRentalCost(days);
+                                    found.rentVehicle();
+
+                                    totalIncome = totalIncome + cost;
+                                }
                             }
                         }
                     }
