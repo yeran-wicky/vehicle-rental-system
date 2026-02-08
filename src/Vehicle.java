@@ -78,7 +78,7 @@ public abstract class Vehicle {
 
     public void returnVehicle() {
         if (isAvailable) {
-            System.out.println("Vehicle is currently available");
+            System.out.println("This vehicle is already available");
         }else {
             isAvailable = true;
             System.out.println("Vehicle returned successfully");

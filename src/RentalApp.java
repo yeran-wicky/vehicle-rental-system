@@ -44,7 +44,7 @@ public class RentalApp {
                             }
                         }
                         if (isIdExists == true){
-                            System.out.println("\nVehicle ID already exists! Try a different one");
+                            System.out.println("\nVehicle ID already exists! Try a different one.");
                         }else {
                             System.out.print("Enter vehicle brand: ");
                             String brand = sc.next();
@@ -57,7 +57,7 @@ public class RentalApp {
                             boolean isAvailable = true;
 
                             vArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
-                            System.out.println("\nYour car has been successfully added to the system");
+                            System.out.println("\nYour car has been successfully added to the system!");
                         }
 
                     }else if (chosenVehic == 2) {
@@ -73,7 +73,7 @@ public class RentalApp {
                             }
                         }
                         if (isIdExists == true){
-                            System.out.println("\nVehicle ID already exists! Try a different one");
+                            System.out.println("\nVehicle ID already exists! Try a different one.");
                         }else {
                             System.out.print("Enter vehicle brand: ");
                             String brand = sc.next();
@@ -86,7 +86,7 @@ public class RentalApp {
                             boolean isAvailable = true;
 
                             vArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
-                            System.out.println("\nYour bike has been successfully added to the system");
+                            System.out.println("\nYour bike has been successfully added to the system!");
                         }
 
                     }else if (chosenVehic == 3) {
@@ -102,7 +102,7 @@ public class RentalApp {
                             }
                         }
                         if (isIdExists == true){
-                            System.out.println("\nVehicle ID already exists! Try a different one");
+                            System.out.println("\nVehicle ID already exists! Try a different one.");
                         }else {
                             System.out.print("Enter vehicle brand: ");
                             String brand = sc.next();
@@ -115,7 +115,7 @@ public class RentalApp {
                             boolean isAvailable = true;
 
                             vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
-                            System.out.println("\nYour van has been successfully added to the system");
+                            System.out.println("\nYour van has been successfully added to the system!");
                         }
                     }
                 }else if (choice == 2){
@@ -131,7 +131,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 3){
-                    System.out.println("\nRent a vehicle option selected.");
+                    System.out.print("\nRent a vehicle option selected.");
 
                     if (vArrList.isEmpty()){
                         System.out.println("No vehicles available for now.");
@@ -148,7 +148,7 @@ public class RentalApp {
                         }
 
                         if (found == null){
-                            System.out.println("This vehicle is not available");
+                            System.out.println("No available vehicle found for this ID");
                         }else{
                             if (!found.getIsAvailable()){
                                 System.out.println("Vehicle is already rented");
@@ -185,7 +185,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 5){
-                    System.out.print("\nSearch vehicle by ID option selected.");
+                    System.out.println("\nSearch vehicle by ID option selected.");
                     if (vArrList.isEmpty()){
                         System.out.println("No vehicles have been added yet to return.");
                         continue;
@@ -208,7 +208,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 6){
-                    System.out.println("Total rental income earned for now: "+totalIncome);
+                    System.out.println("Total rental income earned until now: "+totalIncome);
 
                 }else if (choice == 7) {
                     System.out.println("\nTerminating the program. Good bye!");
