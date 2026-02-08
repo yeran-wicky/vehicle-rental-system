@@ -167,7 +167,7 @@ public class RentalApp {
                     if (vArrList.isEmpty()){
                         System.out.println("No vehicles available for now.");
                     }else{
-                        System.out.println("Enter vehicle ID: ");
+                        System.out.print("Enter vehicle ID: ");
                         String vId = sc.next();
 
                         Vehicle found = null;
