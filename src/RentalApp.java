@@ -162,7 +162,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 3){
-                    System.out.print("\nRent a vehicle option selected.");
+                    System.out.println("\nRent a vehicle option selected.");
 
                     if (vArrList.isEmpty()){
                         System.out.println("No vehicles available for now.");

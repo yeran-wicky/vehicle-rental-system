@@ -20,6 +20,6 @@ public class Cycle extends Vehicle{
 
     @Override
     public double calculateRentalCost(int days) {
-        return getBaseRatePerDay() * days + (getGearCount() * 0.4 * days);
+        return (getBaseRatePerDay() * days) + (getGearCount() * 150);
     }
 }
