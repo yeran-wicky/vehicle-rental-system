@@ -119,7 +119,7 @@ public class RentalApp {
                         }
                     }
                 }else if (choice == 2){
-                    System.out.println("\nAdd a vehicle option selected.");
+                    System.out.println("\nView all vehicles option selected.");
 
                     if (vArrList.isEmpty()){
                         System.out.println("No vehicles available for now.");
@@ -206,7 +206,7 @@ public class RentalApp {
                     sc.nextLine();
                 }
             }catch (InputMismatchException e) {
-                System.out.println("Invalid input");
+                System.out.println("Invalid input. Try again");
                 sc.nextLine();
             }
         }
