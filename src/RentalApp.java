@@ -168,7 +168,25 @@ public class RentalApp {
                             break;
                         }
                     }
+
                 }else if (choice == 5){
+                    System.out.print("\nSearch vehicle by ID selected.");
+                    System.out.print("Enter vehicle ID: ");
+                    String vId = sc.next();
+
+                    boolean isFound = false;
+
+                    for (Vehicle v : vArrList) {
+                        if (v.getVehicleId().equals(vId)) {
+                            v.displayDetails();
+                            isFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!isFound) {
+                        System.out.println("Vehicle not found in the system.");
+                    }
 
                 }else if (choice == 6){
 
