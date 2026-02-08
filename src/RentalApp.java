@@ -170,6 +170,10 @@ public class RentalApp {
 
                 }else if (choice == 4){
                     System.out.println("\nReturn a vehicle option selected.");
+                    if (vArrList.isEmpty()){
+                        System.out.println("No vehicles have been added yet to return.");
+                        continue;
+                    }
                     System.out.print("Enter vehicle ID to return: ");
                     String id = sc.next();
 
