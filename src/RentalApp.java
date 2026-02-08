@@ -191,7 +191,7 @@ public class RentalApp {
                 }else if (choice == 6){
 
                 }else if (choice == 7) {
-                    System.out.println("\nTerminatingGood bye!");
+                    System.out.println("\nTerminating the program. Good bye!");
                     sc.close();
                     break;
                 }else{
