@@ -207,11 +207,11 @@ public class RentalApp {
                     sc.close();
                     break;
                 }else{
-                    System.out.println("Invalid input. Try again");
+                    System.out.println("\nInvalid input. Try again");
                     sc.nextLine();
                 }
             }catch (InputMismatchException e) {
-                System.out.println("Invalid input. Try again");
+                System.out.println("\nInvalid input. Try again");
                 sc.nextLine();
             }
         }
