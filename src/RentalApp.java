@@ -22,8 +22,8 @@ public class RentalApp {
                 int choice = sc.nextInt();
 
                 if (choice == 1){
-                    System.out.println("Add a vehicle option selected.");
-                    System.out.println("List of vehicles available");
+                    System.out.println("\nAdd a vehicle option selected.");
+                    System.out.println("List of vehicle types:");
                     System.out.println("1. Car");
                     System.out.println("2. Bike");
                     System.out.println("3. Van");
@@ -32,6 +32,7 @@ public class RentalApp {
                     int chosenVehic = sc.nextInt();
 
                     if (chosenVehic == 1) {
+                        System.out.println("\nSelected vehicle type: Car");
                         System.out.print("Enter vehicle ID: ");
                         String vehicleId = sc.next();
 
@@ -60,6 +61,7 @@ public class RentalApp {
                         }
 
                     }else if (chosenVehic == 2) {
+                        System.out.println("\nSelected vehicle type: Bike");
                         System.out.print("Enter vehicle ID: ");
                         String vehicleId = sc.next();
 
@@ -88,6 +90,7 @@ public class RentalApp {
                         }
 
                     }else if (chosenVehic == 3) {
+                        System.out.println("\nSelected vehicle type: Van");
                         System.out.print("Enter vehicle ID: ");
                         String vehicleId = sc.next();
 
@@ -116,9 +119,10 @@ public class RentalApp {
                         }
                     }
                 }else if (choice == 2){
+                    System.out.println("\nAdd a vehicle option selected.");
 
                     if (vArrList.isEmpty()){
-                        System.out.println("No vehicles available for now");
+                        System.out.println("No vehicles available for now.");
                     }else{
                         for (Vehicle v : vArrList) {
                             v.displayDetails();
@@ -127,6 +131,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 3){
+                    System.out.println("\nRent a vehicle option selected.");
                     System.out.println("Enter vehicle ID: ");
                     String vId = sc.next();
 
@@ -159,6 +164,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 4){
+                    System.out.println("\nReturn a vehicle option selected.");
                     System.out.print("Enter vehicle ID to return: ");
                     String id = sc.next();
 
@@ -170,7 +176,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 5){
-                    System.out.print("\nSearch vehicle by ID selected.");
+                    System.out.print("\nSearch vehicle by ID option selected.");
                     System.out.print("Enter vehicle ID: ");
                     String vId = sc.next();
 
