@@ -27,6 +27,7 @@ public class RentalApp {
                     System.out.println("1. Car");
                     System.out.println("2. Bike");
                     System.out.println("3. Van");
+                    System.out.println("4. Cycle");
                     System.out.print("Choose vehicle type: ");
 
                     int chosenVehic = sc.nextInt();
@@ -117,7 +118,37 @@ public class RentalApp {
                             vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
                             System.out.println("\nYour van has been successfully added to the system!");
                         }
+
+                    }else if (chosenVehic == 4) {
+                        System.out.println("\nSelected vehicle type: Cycle");
+                        System.out.print("Enter vehicle ID: ");
+                        String vehicleId = sc.next();
+
+                        boolean isIdExists = false;
+                        for (Vehicle v : vArrList) {
+                            if (v.getVehicleId().equals(vehicleId)) {
+                                isIdExists = true;
+                                break;
+                            }
+                        }
+                        if (isIdExists == true){
+                            System.out.println("\nVehicle ID already exists! Try a different one.");
+                        }else {
+                            System.out.print("Enter vehicle brand: ");
+                            String brand = sc.next();
+                            System.out.print("Enter vehicle model: ");
+                            String model = sc.next();
+                            System.out.print("Enter gear count: ");
+                            int gearCount = sc.nextInt();
+                            System.out.print("Enter base rate per day: ");
+                            double baseRatePerDay = sc.nextDouble();
+                            boolean isAvailable = true;
+
+                            vArrList.add(new Cycle(vehicleId, brand, model, baseRatePerDay, isAvailable, gearCount));
+                            System.out.println("\nYour cycle has been successfully added to the system!");
+                        }
                     }
+
                 }else if (choice == 2){
                     System.out.println("\nView all vehicles option selected.");
 
