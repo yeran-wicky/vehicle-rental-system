@@ -186,6 +186,10 @@ public class RentalApp {
 
                 }else if (choice == 5){
                     System.out.print("\nSearch vehicle by ID option selected.");
+                    if (vArrList.isEmpty()){
+                        System.out.println("No vehicles have been added yet to return.");
+                        continue;
+                    }
                     System.out.print("Enter vehicle ID: ");
                     String vId = sc.next();
 
