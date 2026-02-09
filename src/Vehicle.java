@@ -4,7 +4,7 @@ public abstract class Vehicle {
     private String model;
     private double baseRatePerDay;
     private boolean isAvailable;
-
+    // Create parameterized Constructors
     public Vehicle(
             String vehicleId,
             String brand,
@@ -18,7 +18,7 @@ public abstract class Vehicle {
         this.baseRatePerDay = baseRatePerDay;
         this.isAvailable = isAvailable;
     }
-
+    //Use getter and setter method for encapsulation
     public String getVehicleId() {
         return vehicleId;
     }
@@ -58,7 +58,7 @@ public abstract class Vehicle {
     public void setIsAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
     }
-
+    // Display Details
     public void displayDetails() {
         System.out.println("Vehicle ID: "+vehicleId);
         System.out.println("Vehicle brand: "+brand);
@@ -66,7 +66,7 @@ public abstract class Vehicle {
         System.out.println("Base rate per day: "+baseRatePerDay);
         System.out.println("Availability: "+isAvailable);
     }
-
+    // Rent and Return vehicles by using if
     public void rentVehicle() {
         if (!isAvailable) {
             System.out.println("\nVehicle is already rented");
@@ -84,6 +84,6 @@ public abstract class Vehicle {
             System.out.println("\nVehicle returned successfully");
         }
     }
-
+    // Use "abstract" to reuse the code
     public abstract double calculateRentalCost(int days);
 }
