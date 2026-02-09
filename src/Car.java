@@ -2,7 +2,7 @@ public class Car extends Vehicle {
     //Car(child) inherits all features from Vehicles(parent).
 
     private int numberOfSeats;
-    //Car has a unique attribute which is engineCapacityCC
+    //Car has a unique attribute which is numberOfSeats
 
     public Car(
             String vehicleId,
@@ -28,6 +28,6 @@ public class Car extends Vehicle {
     @Override
     public double calculateRentalCost(int days) {
         return getBaseRatePerDay() * days + (getNumberOfSeats() * 200 * days);
-        //Calculate the cost 
+        //Calculate the cost
     }
 }

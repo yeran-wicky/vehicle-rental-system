@@ -1,6 +1,8 @@
 public class Cycle extends Vehicle{
+    //Cycle(child) inherits all features from Vehicles(parent).
 
     private int gearCount;
+    //Cycle has a unique attribute which is gear count
 
     public Cycle(
             String vehicleId,
