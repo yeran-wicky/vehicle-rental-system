@@ -241,7 +241,7 @@ public class RentalApp {
                     }
 
                 }else if (choice == 6){
-                    System.out.println("Total rental income earned until now: "+totalIncome);
+                    System.out.println("\nTotal rental income earned until now: "+totalIncome);
 
                 }else if (choice == 7) {
                     System.out.println("\nTerminating the program. Good bye!");
