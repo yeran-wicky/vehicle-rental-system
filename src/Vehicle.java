@@ -1,10 +1,12 @@
 public abstract class Vehicle {
+    // Encapsulated fields to store common vehicle details
     private String vehicleId;
     private String brand;
     private String model;
     private double baseRatePerDay;
     private boolean isAvailable;
 
+    // Constructor to initialize the common attributes
     public Vehicle(
             String vehicleId,
             String brand,
@@ -19,6 +21,7 @@ public abstract class Vehicle {
         this.isAvailable = isAvailable;
     }
 
+    // Getters and Setters for accessing and modifying private fields
     public String getVehicleId() {
         return vehicleId;
     }
@@ -59,6 +62,7 @@ public abstract class Vehicle {
         this.isAvailable = isAvailable;
     }
 
+    // Method to display vehicle details
     public void displayDetails() {
         System.out.println("Vehicle ID: "+vehicleId);
         System.out.println("Vehicle brand: "+brand);
@@ -67,6 +71,7 @@ public abstract class Vehicle {
         System.out.println("Availability: "+isAvailable);
     }
 
+    // Handle renting - Check if available then mark as rented
     public void rentVehicle() {
         if (!isAvailable) {
             System.out.println("\nVehicle is already rented");
@@ -76,6 +81,7 @@ public abstract class Vehicle {
         }
     }
 
+    // Handle returning: Mark the vehicle as available again
     public void returnVehicle() {
         if (isAvailable) {
             System.out.println("\nThis vehicle is already available");
@@ -85,5 +91,6 @@ public abstract class Vehicle {
         }
     }
 
+    // Abstract method: Forces subclasses to define their own cost calculation
     public abstract double calculateRentalCost(int days);
 }

@@ -2,11 +2,13 @@ import java.util.*;
 
 public class RentalApp {
 
+    // Store all vehicle objects (Car, Bike, Van, Cycle) in a single list
     public static ArrayList <Vehicle> vArrList = new ArrayList <Vehicle> ();
     public static double totalIncome;
     public static Scanner sc = new Scanner (System.in);
 
     public static void main(String[] args){
+        // Infinite loop to keep the menu running until user exits
         while(true) {
             System.out.println("\n===== Vehicle Rental Management System =====");
             System.out.println("1. Add a vehicle");
@@ -21,6 +23,7 @@ public class RentalApp {
             try {
                 int choice = sc.nextInt();
 
+                // Add a new Vehicle
                 if (choice == 1){
                     System.out.println("\nAdd a vehicle option selected.");
                     System.out.println("List of vehicle types:");
@@ -35,6 +38,7 @@ public class RentalApp {
                     System.out.print("Enter vehicle ID: ");
                     String vehicleId = sc.next();
 
+                    // Check if the Vehicle ID already exists to prevent duplicates
                     boolean isIdExists = false;
                     for (Vehicle v : vArrList) {
                         if (v.getVehicleId().equals(vehicleId)) {
@@ -54,6 +58,7 @@ public class RentalApp {
                         double baseRatePerDay = sc.nextDouble();
                         boolean isAvailable = true;
 
+                        // Create specific objects based on user selection
                         if (chosenVehic == 1) {
                             System.out.print("Enter number of seats: ");
                             int numberOfSeats = sc.nextInt();
@@ -80,6 +85,7 @@ public class RentalApp {
                         }
                     }
 
+                    // View All Vehicles
                 }else if (choice == 2){
                     System.out.println("\nView all vehicles option selected.");
 
@@ -92,6 +98,7 @@ public class RentalApp {
                         }
                     }
 
+                    // Rent a Vehicle
                 }else if (choice == 3){
                     System.out.println("\nRent a vehicle option selected.");
 
@@ -101,6 +108,7 @@ public class RentalApp {
                         System.out.print("Enter vehicle ID: ");
                         String vId = sc.next();
 
+                        // Find vehicle by ID
                         Vehicle found = null;
                         for (Vehicle v : vArrList) {
                             if (v.getVehicleId().equals(vId)){
@@ -112,6 +120,7 @@ public class RentalApp {
                         if (found == null){
                             System.out.println("No available vehicle found for this ID");
                         }else{
+                            // Check availability and calculate cost
                             if (!found.getIsAvailable()){
                                 System.out.println("Vehicle is already rented");
                             }else{
@@ -130,6 +139,7 @@ public class RentalApp {
                         }
                     }
 
+                    // Return a Vehicle
                 }else if (choice == 4){
                     System.out.println("\nReturn a vehicle option selected.");
                     if (vArrList.isEmpty()){
@@ -141,13 +151,14 @@ public class RentalApp {
 
                     for (Vehicle v : vArrList) {
                         if (v.getVehicleId().equals(id)) {
-                            v.returnVehicle();
+                            v.returnVehicle();// Update status to available
                             break;
                         }else{
                             System.out.println("\nNo vehicle found for this ID.");
                         }
                     }
 
+                    // Search Vehicle by ID
                 }else if (choice == 5){
                     System.out.println("\nSearch vehicle by ID option selected.");
                     if (vArrList.isEmpty()){
@@ -171,20 +182,23 @@ public class RentalApp {
                         System.out.println("Vehicle not found in the system.");
                     }
 
+                    // View Income
                 }else if (choice == 6){
                     System.out.println("\nTotal rental income earned until now: "+totalIncome);
 
+                    // Exit
                 }else if (choice == 7) {
                     System.out.println("\nTerminating the program. Good bye!");
                     sc.close();
-                    break;
+                    break; // Break the while loop to stop program
                 }else{
                     System.out.println("\nInvalid input. Try again");
                     sc.nextLine();
                 }
             }catch (InputMismatchException e) {
+                // Handle errors if user enters text instead of numbers
                 System.out.println("\nInvalid input. Try again");
-                sc.nextLine();
+                sc.nextLine(); // Clear the buffer
             }
         }
     }
