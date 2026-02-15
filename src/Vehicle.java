@@ -68,19 +68,19 @@ public abstract class Vehicle {
     }
 
     public void rentVehicle() {
-        if (!isAvailable) {
+        if (!getIsAvailable()) {
             System.out.println("\nVehicle is already rented");
         }else {
-            isAvailable = false;
+            setIsAvailable(false);
             System.out.println("\nVehicle rented successfully");
         }
     }
 
     public void returnVehicle() {
-        if (isAvailable) {
+        if (getIsAvailable()) {
             System.out.println("\nThis vehicle is already available");
         }else {
-            isAvailable = true;
+            setIsAvailable(true);
             System.out.println("\nVehicle returned successfully");
         }
     }
