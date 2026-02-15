@@ -57,24 +57,54 @@ public class RentalApp {
                         if (chosenVehic == 1) {
                             System.out.print("Enter number of seats: ");
                             int numberOfSeats = sc.nextInt();
-                            vArrList.add(new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats));
+                            Car c = new Car(vehicleId, brand, model, baseRatePerDay, isAvailable, numberOfSeats);
+                            c.setVehicleId(vehicleId);
+                            c.setBrand(brand);
+                            c.setModel(model);
+                            c.setBaseRatePerDay(baseRatePerDay);
+                            c.setIsAvailable(isAvailable);
+                            c.setNumberOfSeats(numberOfSeats);
+
+                            vArrList.add(c);
                             System.out.println("\nYour car has been successfully added to the system!");
 
                         }else if (chosenVehic == 2) {
                             System.out.print("Enter engine capacity: ");
                             int engineCapacityCC = sc.nextInt();
-                            vArrList.add(new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC));
+                            Bike b = new Bike(vehicleId, brand, model, baseRatePerDay, isAvailable, engineCapacityCC);
+                            b.setVehicleId(vehicleId);
+                            b.setBrand(brand);
+                            b.setModel(model);
+                            b.setBaseRatePerDay(baseRatePerDay);
+                            b.setIsAvailable(isAvailable);
+                            b.setEngineCapacityCC(engineCapacityCC);
+
+                            vArrList.add(b);
                             System.out.println("\nYour bike has been successfully added to the system!");
 
                         }else if (chosenVehic == 3) {
                             System.out.print("Enter cargo capacity(Kg): ");
                             double cargoCapacityKg = sc.nextDouble();
+                            Van v = new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg);
+                            v.setVehicleId(vehicleId);
+                            v.setBrand(brand);
+                            v.setModel(model);
+                            v.setBaseRatePerDay(baseRatePerDay);
+                            v.setIsAvailable(isAvailable);
+                            v.setCargoCapacityKg(cargoCapacityKg);
                             vArrList.add(new Van(vehicleId, brand, model, baseRatePerDay, isAvailable, cargoCapacityKg));
                             System.out.println("\nYour van has been successfully added to the system!");
 
                         }else if (chosenVehic == 4) {
                             System.out.print("Enter gear count: ");
                             int gearCount = sc.nextInt();
+                            Cycle y = new Cycle(vehicleId, brand, model, baseRatePerDay, isAvailable, gearCount);
+                            y.setVehicleId(vehicleId);
+                            y.setBrand(brand);
+                            y.setModel(model);
+                            y.setBaseRatePerDay(baseRatePerDay);
+                            y.setIsAvailable(isAvailable);
+                            y.setGearCount(gearCount);
                             vArrList.add(new Cycle(vehicleId, brand, model, baseRatePerDay, isAvailable, gearCount));
                             System.out.println("\nYour cycle has been successfully added to the system!");
                         }

@@ -18,6 +18,10 @@ public class Van extends Vehicle{
         return cargoCapacityKg;
     }
 
+    public void setCargoCapacityKg(double cargoCapacityKg) {
+        this.cargoCapacityKg = cargoCapacityKg;
+    }
+
     @Override
     public double calculateRentalCost(int days) {
         return getBaseRatePerDay() * days + (getCargoCapacityKg() * 0.2 * days);
