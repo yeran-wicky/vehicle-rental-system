@@ -2,9 +2,9 @@ import java.util.*;
 
 public class RentalApp {
 
-    public static ArrayList <Vehicle> vArrList = new ArrayList <Vehicle> ();
-    public static double totalIncome;
-    public static Scanner sc = new Scanner (System.in);
+    private static ArrayList <Vehicle> vArrList = new ArrayList <Vehicle> ();
+    private static double totalIncome;
+    private static Scanner sc = new Scanner (System.in);
 
     public static void main(String[] args){
         while(true) {
