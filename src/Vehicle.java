@@ -60,11 +60,11 @@ public abstract class Vehicle {
     }
 
     public void displayDetails() {
-        System.out.println("Vehicle ID: "+vehicleId);
-        System.out.println("Vehicle brand: "+brand);
-        System.out.println("Vehicle model: "+model);
-        System.out.println("Base rate per day: "+baseRatePerDay);
-        System.out.println("Availability: "+isAvailable);
+        System.out.println("Vehicle ID: "+getVehicleId());
+        System.out.println("Vehicle brand: "+getBrand());
+        System.out.println("Vehicle model: "+getModel());
+        System.out.println("Base rate per day: "+getBaseRatePerDay());
+        System.out.println("Availability: "+getIsAvailable());
     }
 
     public void rentVehicle() {
