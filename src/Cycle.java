@@ -18,10 +18,6 @@ public class Cycle extends Vehicle{
         return gearCount;
     }
 
-    public void setGearCount(int gearCount) {
-        this.gearCount = gearCount;
-    }
-
     @Override
     public double calculateRentalCost(int days) {
         return (getBaseRatePerDay() * days) + (getGearCount() * 150);

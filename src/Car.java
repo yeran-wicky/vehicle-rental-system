@@ -18,10 +18,6 @@ public class Car extends Vehicle {
         return numberOfSeats;
     }
 
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
-
     @Override
     public double calculateRentalCost(int days) {
         return getBaseRatePerDay() * days + (getNumberOfSeats() * 200 * days);

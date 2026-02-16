@@ -18,10 +18,6 @@ public class Bike extends Vehicle{
         return engineCapacityCC;
     }
 
-    public void setEngineCapacityCC(int engineCapacityCC) {
-        this.engineCapacityCC = engineCapacityCC;
-    }
-
     @Override
     public double calculateRentalCost(int days) {
         return getBaseRatePerDay() * days + (getEngineCapacityCC() * 0.5 * days);
