@@ -111,7 +111,7 @@ public class RentalApp {
                     // to the system
                     if (vArrList.isEmpty()){
                         // If so, a message is printed saying that no vehicles are available
-                        System.out.println("No vehicles available for now.");
+                        System.out.println("\nNo vehicles available for now.");
                     }else{
                         // Otherwise (vehicles exist), vehicle details are printed
                         for (Vehicle v : vArrList) {
@@ -128,7 +128,7 @@ public class RentalApp {
                     // to the system
                     if (vArrList.isEmpty()){
                         // If so, a message is printed saying that no vehicles are available
-                        System.out.println("No vehicles available for now.");
+                        System.out.println("\nNo vehicles available for now.");
                     }else{
                         // Otherwise (vehicles exist), asks user to enter the ID Of the vehicle he would like to rent
                         System.out.print("Enter vehicle ID: ");
@@ -146,7 +146,7 @@ public class RentalApp {
 
                         // If no vehicle is found for that ID, a message is printed saying that
                         if (found == null){
-                            System.out.println("No available vehicle found for this ID");
+                            System.out.println("\nNo available vehicle found for this ID");
                         }else{
                             // If the vehicle is found in the system, then its availability is checked
                             // (Vehicle is rented or not)
@@ -154,7 +154,7 @@ public class RentalApp {
                                 // If the availability of the vehicle returned false then 'false' is
                                 // inverted to 'true', then a message is displayed saying that vehicle
                                 // is rented as the condition became true
-                                System.out.println("Vehicle is already rented");
+                                System.out.println("\nVehicle is already rented");
                             }else{
                                 // Otherwise, asks the user to enter how many days want to rent
                                 System.out.print("Enter number of days: ");
@@ -163,7 +163,7 @@ public class RentalApp {
                                 // Prevents user from putting zero or less as the number of days
                                 if (days <= 0) {
                                     // If he did, a message is printed saying that days must be greater than zero
-                                    System.out.println("Days must be greater than zero");
+                                    System.out.println("\nDays must be greater than zero");
                                 }else{
                                     // If days count is correct, then rental cost is calculated using the
                                     // calculateRentalCost() function (Polymorphism)
@@ -178,7 +178,6 @@ public class RentalApp {
                             }
                         }
                     }
-
                 }
                 // If the user chooses 4 as the option, vehicle returning operation executes
                 else if (choice == 4){
@@ -187,7 +186,7 @@ public class RentalApp {
                     // to the system
                     if (vArrList.isEmpty()){
                         // If so, a message is printed saying that no vehicles added yet to return
-                        System.out.println("No vehicles have been added yet to return.");
+                        System.out.println("\nNo vehicles have been added yet to return.");
                         continue;
                     }
                     // If the arraylist is not empty, then asks the user to enter the ID of the
@@ -216,7 +215,7 @@ public class RentalApp {
                     System.out.println("\nSearch vehicle by ID option selected.");
                     if (vArrList.isEmpty()){
                         // If so, a message is printed saying that no vehicles available in the system
-                        System.out.println("No vehicles have been added yet to return.");
+                        System.out.println("\nNo vehicles available for now.");
                         continue;
                     }
                     // Otherwise, ask the user to enter the vehicle ID to search
@@ -240,7 +239,7 @@ public class RentalApp {
                     // If a vehicle is not found in the previous operation,
                     // then isFound is false. Then a message is printed that vehicle is not found in the system
                     if (!isFound) {
-                        System.out.println("Vehicle not found in the system.");
+                        System.out.println("\nVehicle not found in the system.");
                     }
                 }
                 // If the user chooses 6 as the option, view total rental income operation executes
