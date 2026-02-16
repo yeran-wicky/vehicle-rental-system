@@ -101,6 +101,9 @@ public class RentalApp {
                             vArrList.add(new Cycle(vehicleId, brand, model, baseRatePerDay, isAvailable, gearCount));
                             System.out.println("\nYour cycle has been successfully added to the system!");
                         }
+                        else{
+                            System.out.println("\nInvalid vehicle type selection!");
+                        }
                     }
                 }
                 // If the user chooses 2 as the option, all vehicles in the system is displayed
@@ -146,7 +149,7 @@ public class RentalApp {
 
                         // If no vehicle is found for that ID, a message is printed saying that
                         if (found == null){
-                            System.out.println("\nNo available vehicle found for this ID");
+                            System.out.println("\nNo available vehicle found for this ID.");
                         }else{
                             // If the vehicle is found in the system, then its availability is checked
                             // (Vehicle is rented or not)
@@ -154,7 +157,7 @@ public class RentalApp {
                                 // If the availability of the vehicle returned false then 'false' is
                                 // inverted to 'true', then a message is displayed saying that vehicle
                                 // is rented as the condition became true
-                                System.out.println("\nVehicle is already rented");
+                                System.out.println("\nVehicle is already rented.");
                             }else{
                                 // Otherwise, asks the user to enter how many days want to rent
                                 System.out.print("Enter number of days: ");
@@ -163,7 +166,7 @@ public class RentalApp {
                                 // Prevents user from putting zero or less as the number of days
                                 if (days <= 0) {
                                     // If he did, a message is printed saying that days must be greater than zero
-                                    System.out.println("\nDays must be greater than zero");
+                                    System.out.println("\nDays must be greater than zero!");
                                 }else{
                                     // If days count is correct, then rental cost is calculated using the
                                     // calculateRentalCost() function (Polymorphism)
@@ -256,14 +259,14 @@ public class RentalApp {
                 }else{
                     // If user has entered a choice outside 1~7,
                     // a message is printed saying the choice is invalid
-                    System.out.println("\nInvalid input. Try again");
+                    System.out.println("\nInvalid input! Try again");
                     // Clears the invalid input from scanner buffer
                     sc.nextLine();
                 }
             }catch (InputMismatchException e) {
                 // This catches invalid input types and prints friendly error message
                 // preventing the program from crashing
-                System.out.println("\nInvalid input. Try again");
+                System.out.println("\nInvalid input! Try again");
                 // Clears the invalid input from scanner buffer
                 sc.nextLine();
             }
