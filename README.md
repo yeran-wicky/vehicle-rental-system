@@ -1,8 +1,8 @@
-# 🚗 Vehicle Rental Management System (CLI – Java)
+# Vehicle Rental Management System
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The **Vehicle Rental Management System** is a **menu-driven command-line application** developed using **Java** to demonstrate core **Object-Oriented Programming (OOP)** principles.
 
@@ -17,7 +17,7 @@ This project focuses on:
 
 ---
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 By completing this project, the following objectives are achieved:
 
@@ -30,7 +30,7 @@ By completing this project, the following objectives are achieved:
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Programming Language:** Java  
 - **JDK:** Java Development Kit (JDK 8 or higher)  
@@ -39,9 +39,9 @@ By completing this project, the following objectives are achieved:
 
 ---
 
-## 🏗️ System Design
+## System Design
 
-### 🔹 Class Structure
+### Class Structure
 
 #### 1. Vehicle (Abstract Class)
 
@@ -64,26 +64,26 @@ By completing this project, the following objectives are achieved:
 
 #### 2. Subclasses (Inheritance & Polymorphism)
 
-##### 🚘 Car
+##### Car
 - **Additional Attribute:** `numberOfSeats : int`
 - **Rental Cost Formula:**  
   `baseRatePerDay * days + (numberOfSeats * 200 * days)`
 
-##### 🏍️ Bike
+##### Bike
 - **Additional Attribute:** `engineCapacityCC : int`
 - **Rental Cost Formula:**  
   `baseRatePerDay * days + (engineCapacityCC * 0.5 * days)`
 
-##### 🚐 Van
+##### Van
 - **Additional Attribute:** `cargoCapacityKg : double`
 - **Rental Cost Formula:**  
   `baseRatePerDay * days + (cargoCapacityKg * 0.2 * days)`
 
 ---
 
-## 💻 Application Features
+## Application Features
 
-### 📋 Menu Options
+### Menu Options
 1. Add a Vehicle  
 2. View All Vehicles  
 3. Rent a Vehicle  
@@ -94,7 +94,7 @@ By completing this project, the following objectives are achieved:
 
 ---
 
-## ⚙️ Functional Requirements
+## Functional Requirements
 
 - Vehicles are stored using an `ArrayList`  
 - Vehicle IDs must be unique  
@@ -105,7 +105,7 @@ By completing this project, the following objectives are achieved:
 
 ---
 
-## 🔐 Validation & Exception Handling
+## Validation & Exception Handling
 
 - Invalid numeric inputs handled using `try-catch` blocks  
 - Invalid menu selections are prevented  
@@ -114,7 +114,7 @@ By completing this project, the following objectives are achieved:
 
 ---
 
-## 🚀 Challenging Component (Mandatory)
+## Challenging Component (Mandatory)
 
 **Implemented Feature:** File Handling  
 
@@ -125,7 +125,7 @@ By completing this project, the following objectives are achieved:
 
 ---
 
-## ▶️ How to Compile and Run
+## How to Compile and Run
 
 ### Using Command Line
 
@@ -136,7 +136,7 @@ java RentalApp
 
 ---
 
-## 🧪 Sample Menu Output
+## Sample Menu Output
 
 ===== Vehicle Rental Management System =====
 1. Add a Vehicle
@@ -150,7 +150,7 @@ Enter your choice:
 
 ---
 
-## 📄 Assumptions
+## Assumptions
 
 1. Vehicle IDs are entered manually and must be unique
 2. Rental data persistence applies only if file handling is enabled
@@ -158,7 +158,7 @@ Enter your choice:
 
 ---
 
-## 📈 Non-Functional Requirements
+## Non-Functional Requirements
 
 1. Program compiles and runs without errors
 2. Follows standard Java naming conventions
@@ -167,7 +167,7 @@ Enter your choice:
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 1. B. Y. Wickramaarachchi (Lead)
 2. A. S. P. Gunarathne
