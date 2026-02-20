@@ -17,7 +17,7 @@ public class Cycle extends Vehicle{
     ){
         // 'super' calls the 'Vehicle' constructor to set common fields
         super(vehicleId, brand, model, baseRatePerDay, isAvailable);
-        // Set the 'Car' specific fields
+        // Set the 'Cycle' specific fields
         this.gearCount = gearCount;
     }
 
